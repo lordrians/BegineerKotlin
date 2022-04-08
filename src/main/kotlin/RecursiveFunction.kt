@@ -1,20 +1,20 @@
 
-//fun main() {
-//    val x = 5
-//
-//    findOddNumber(end = x)
-//    println()
-//
-//    println("(Non Tail Rekursif) Faktorial dari $x adalah ${factorial(x)}")
-//    println("(Tail Rekursif) Faktorial dari $x adalah ${factorialTailRecursive(x)}")
-//    println()
-//
-//    println("(Non Tail Rekursif) Perjumlahan Angka 0 - $x adalah ${findSum(x)}")
-//    println("(Tail Rekursif) RekurPerjumlahan Angka 0 - $x adalah ${findSumTailRecursive(x)}")
-//}
+fun main() {
+    val x = 5
+
+    findOddNumber(end = x)
+    println()
+
+    println("(Non Tail Rekursif) Faktorial dari $x adalah ${factorial(x)}")
+    println("(Tail Rekursif) Faktorial dari $x adalah ${factorialTailRecursive(x)}")
+    println()
+
+    println("(Non Tail Rekursif) Perjumlahan Angka 0 - $x adalah ${findSum(x)}")
+    println("(Tail Rekursif) RekurPerjumlahan Angka 0 - $x adalah ${findSumTailRecursive(x)}")
+}
 
 //Simple Recursive
-fun findOddNumber(start: Int = 0, end: Int) {
+private fun findOddNumber(start: Int = 0, end: Int) {
     if (start <= end){
         if (start % 2 == 0){
             findOddNumber(start + 1, end)
@@ -26,7 +26,7 @@ fun findOddNumber(start: Int = 0, end: Int) {
 }
 
 //Non Tail Recursive
-fun factorial(number: Int): Int{
+private fun factorial(number: Int): Int{
     return if (number == 1){
         number
     } else {
@@ -35,7 +35,7 @@ fun factorial(number: Int): Int{
 }
 
 //Tail Recursive
-tailrec fun factorialTailRecursive(number: Int, run: Int = 1): Int{
+private tailrec fun factorialTailRecursive(number: Int, run: Int = 1): Int{
     return if (number == 1){
         run
     } else {
@@ -44,7 +44,7 @@ tailrec fun factorialTailRecursive(number: Int, run: Int = 1): Int{
 }
 
 //Non Tail Recursive
-fun findSum(num: Int, stepTotal: Int = 0): Int {
+private fun findSum(num: Int, stepTotal: Int = 0): Int {
     return if (num == 0) {
         stepTotal
     }
@@ -54,7 +54,7 @@ fun findSum(num: Int, stepTotal: Int = 0): Int {
 }
 
 //Tail Recursive
-tailrec fun findSumTailRecursive(num: Int, stepTotal: Int = 0): Int {
+private tailrec fun findSumTailRecursive(num: Int, stepTotal: Int = 0): Int {
     return if (num == 0) {
         stepTotal
     }
