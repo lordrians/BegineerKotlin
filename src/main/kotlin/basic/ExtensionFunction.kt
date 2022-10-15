@@ -1,3 +1,5 @@
+package basic
+
 import java.text.NumberFormat
 import java.util.*
 
@@ -24,7 +26,7 @@ fun main() {
 private fun Int.isOdd() = this % 2 != 0
 private fun Int.isEven() = this % 2 == 0
 
-private fun Int.toIdrFormat(): String {
+fun Int.toIdrFormat(): String {
     val localId = Locale("in", "ID")
     val formatter = NumberFormat.getCurrencyInstance(localId)
     return formatter.format(this)

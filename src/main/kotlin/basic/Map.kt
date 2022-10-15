@@ -48,7 +48,7 @@ fun main(){
     println()
 
     counter = 0
-    myProfile.forEach { key, value ->
+    myProfile.forEach { (key, value) ->
         counter++
         println("(Foreach) Data ke-$counter key -> $key & value -> $value")
     }

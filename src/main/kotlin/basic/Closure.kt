@@ -14,10 +14,10 @@ fun main(){
         counter++
     }
 
-    println("counter Awal -> $counter")
-    standarMessage.invoke()
-    standarMessage.invoke()
-    standarMessage.invoke()
-    standarMessage.invoke()
-    println("counter Akhir -> $counter")
+//    println("counter Awal -> $counter")
+//    standarMessage.invoke()
+//    standarMessage.invoke()
+//    standarMessage.invoke()
+//    standarMessage.invoke()
+//    println("counter Akhir -> $counter")
 }
